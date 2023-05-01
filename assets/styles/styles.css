@@ -1,0 +1,257 @@
+:root {
+  /* for gradients mixes */
+  --light_slate_blue: hsl(252, 100%, 67%);
+  --light_royal_blue: hsl(241, 81%, 54%);
+  --violet_blue: hsla(256, 72%, 46%, 1);
+  --persian_blue: hsla(241, 72%, 46%, 0);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.main {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px 15px rgba(211, 211, 211, 0.4);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  float: left;
+  background: linear-gradient(
+    to bottom,
+    var(--light_slate_blue) 1%,
+    var(--light_royal_blue) 99%
+  );
+  border-radius: 20px;
+}
+
+.result-title h1 {
+  font-weight: 800;
+  font-size: 36px;
+  color: hsl(241, 100%, 89%);
+}
+
+.result-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--violet_blue),
+    var(--persian_blue)
+  );
+}
+
+.result-score .actual {
+  font-weight: 800;
+  font-size: 64px;
+  color: hsl(0, 0%, 100%);
+}
+
+.result-score .max {
+  opacity: 0.6;
+  color: hsl(241, 100%, 89%);
+}
+
+.result-brief {
+  margin: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(241, 100%, 89%);
+}
+
+.result-brief h3 {
+  font-weight: 700;
+  font-size: 30px;
+  color: hsl(0, 0%, 100%);
+}
+
+.result-brief p {
+  font-weight: 400;
+  font-size: 18px;
+  color: hsl(241, 100%, 89%);
+}
+
+.card-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  width: 50%;
+  float: right;
+  margin: 2px;
+  border-radius: 20px;
+}
+
+.summary-title h1 {
+  margin-top: 40px;
+  margin-left: 25px;
+  font-weight: 800;
+  font-size: 22px;
+  color: hsl(224, 30%, 27%);
+}
+
+#dynamic-list {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+}
+
+img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 12px;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  border-radius: 0.7rem;
+}
+
+.reaction {
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(0, 100%, 90%);
+}
+
+.memory {
+  color: hsl(39, 100%, 50%);
+  background-color: hsl(39, 100%, 90%);
+}
+
+.verbal {
+  color: hsl(166, 100%, 30%);
+  background-color: hsl(166, 100%, 90%);
+}
+
+.visual {
+  color: hsl(234, 85%, 40%);
+  background-color: hsl(234, 85%, 90%);
+}
+
+.category {
+  flex: 1;
+}
+
+.score,
+.score-text {
+  display: inline-block;
+  margin-left: 0.1em;
+}
+
+.score {
+  font-weight: 700;
+  color: hsl(224, 30%, 27%);
+  font-size: 16px;
+}
+
+.score-text {
+  font-weight: 700;
+  color: hsl(224, 30%, 27%);
+  opacity: 0.4;
+}
+
+.btn {
+  outline: 0;
+  border: none;
+  width: 100%;
+  height: 3rem;
+  border-radius: 3rem;
+  font-weight: 500;
+  font-size: 17px;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light_slate_blue) 1%,
+    var(--light_royal_blue) 99%
+  );
+}
+
+footer {
+  margin: 10px;
+  padding: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+  }
+  
+  .card-result, .card-summary {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+  
+  .result-score {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+  
+  .result-score .actual {
+    font-size: 48px;
+  }
+  
+  .result-brief h3 {
+    font-size: 24px;
+  }
+  
+  .summary-title h1 {
+    margin-left: 0;
+    font-size: 20px;
+  }
+  
+  .btn {
+    width: 80%;
+    margin: 20px 0;
+  }
+}
