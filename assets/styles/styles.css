@@ -80,13 +80,14 @@ body {
   color: hsl(241, 100%, 89%);
 }
 
-.result-brief h3 {
+.result-brief h2 {
   font-weight: 700;
   font-size: 30px;
   color: hsl(0, 0%, 100%);
 }
 
 .result-brief p {
+  padding: 15px;
   font-weight: 400;
   font-size: 18px;
   color: hsl(241, 100%, 89%);
@@ -183,9 +184,11 @@ li {
 }
 
 .btn {
+  margin: auto;
+  padding: auto;
   outline: 0;
   border: none;
-  width: 100%;
+  width: 90%;
   height: 3rem;
   border-radius: 3rem;
   font-weight: 500;
@@ -245,13 +248,9 @@ footer {
     font-size: 24px;
   }
   
-  .summary-title h1 {
-    margin-left: 0;
-    font-size: 20px;
-  }
-  
   .btn {
-    width: 80%;
-    margin: 20px 0;
+    margin: auto;
+    padding: auto;
+    width: 90%;
   }
 }
