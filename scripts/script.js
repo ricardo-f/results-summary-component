@@ -1,4 +1,4 @@
-fetch('assets/scripts/data.json')
+fetch('scripts/data.json')
   .then(response => response.json())
   .then(data => {
     const list = document.getElementById('dynamic-list');
